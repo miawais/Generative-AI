@@ -11,7 +11,7 @@ engine = create_engine(f'mysql+pymysql://{username}:{password}@{host}/{database}
 
 
 # Load CSV data into a DataFrame
-df = pd.read_csv('D:/Repos/Employee.csv')
+df = pd.read_csv('D:/github/Generative-AI/SpeakDB/Employee.csv')
 
 # Load DataFrame into the SQL table
-df.to_sql('employeedetails', con=engine, if_exists='replace', index=False)
+df.to_sql('employee_data', con=engine, if_exists='replace', index=False)
