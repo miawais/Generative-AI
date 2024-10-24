@@ -29,3 +29,6 @@ if radio_opt.Index(selected_opt)==1:
     mysql_db=st.sidebar.text_input("MySQL Database")
 else:
     db_uri=LOCALDB    
+    
+    
+api_key=st.sidebar.text_input(label="GROQ_API_KEY",type="password")
