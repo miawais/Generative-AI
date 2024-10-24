@@ -32,3 +32,17 @@ else:
     
     
 api_key=st.sidebar.text_input(label="GROQ_API_KEY",type="password")
+
+
+if not db_uri:
+    st.info("Please Enter The Database Information and Uri")
+    
+if not api_key:
+    st.info("Please Enter Your Groq API Key")
+    
+    
+##calling LLM
+llm=ChatGroq(groq_api_key=api_key,model_name="Llama3-8b-8192",streaming=True)
+
+
+
